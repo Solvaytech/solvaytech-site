@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>TEST - Solvaytech</title>
+        {% include 'flex/include/head.html' %}
+    </head>
+
+    <body>
+    {% include 'flex/include/header/page-header.html' %}
+    <main id="main">
+        <!-- ======= Breadcrumbs ======= -->
+        <section class="breadcrumbs">
+            <div class="container">
+                <ol>
+                    <li><a href="/">Anasayfa</a></li>
+                    <li><a href="/cozumler">Çözümlerimiz</a></li>
+                    <li>Makine Ekipman Elektrik Dönüşüm Projeleri</li>
+                </ol>
+                <h2>Makine Ekipman Elektrik Dönüşüm Projeleri</h2>
+            </div>
+        </section><!-- End Breadcrumbs -->
+        <section class="inner-page">
+            <div class="container p-5 mb-4 bg-light rounded-3">
+            </div>
+        </section>
+    </main><!-- End #main -->
+    {% include 'flex/include/flex-footer.html' %}
+    {% include 'flex/include/script.html' %}
+    <script src="{% static 'assets/flex/js/admin/admin.js' %}"></script>
+
+    </body>
+</html>

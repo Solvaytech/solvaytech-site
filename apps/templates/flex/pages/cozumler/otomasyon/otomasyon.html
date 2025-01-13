@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Otomasyon - Solvaytech</title>
+        {% include 'flex/include/head.html' %}
+    </head>
+
+    <body>
+    {% include 'flex/include/header/page-header.html' %}
+    <main id="main">
+        <!-- ======= Breadcrumbs ======= -->
+        <section class="breadcrumbs">
+            <div class="container">
+                <ol>
+                    <li><a href="/">Anasayfa</a></li>
+                    <li><a href="/cozumler">Çözümlerimiz</a></li>
+                    <li>Otomasyon</li>
+                </ol>
+                <h2>Otomasyon</h2>
+            </div>
+        </section><!-- End Breadcrumbs -->
+        <section class="inner-page">
+            <div class="container p-5 mb-4 bg-light rounded-3">
+                <div class="container-fluid">
+                    <header class="section-header"><p>Otomasyon</p></header>
+                    <p style="text-align:justify;">
+                        Anahtar teslimi ürün veya sistem geliştirme projeleri güçlü teknik altyapısı, yenilikçi bakış açısı, esnek çözümleri ve müşteri odaklı yaklaşım sergiler. <br><br>
+                        Müşteri isteklerini daha iyi karşılamayı hedefleyen yenilikçi bir bakış açısına sahiptir. 
+                        Ürün ve hizmet üretiminden teslimatına kadar yüksek verimliliği hedefler. 
+                        Müşteri ihtiyacına uygun tüm süreçler yönetilir ve geliştirmeler yapılarak teslim edilir.
+                    </p>
+                </div>
+                <div class="row mt-5 align-items-center">
+                    <div class="d-flex justify-content-start col-6">
+                        <a href="/cozumler" class="btn btn-primary" role="button"><i class="bi bi-chevron-left"></i> Çözümler </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main><!-- End #main -->
+    {% include 'flex/include/flex-footer.html' %}
+    {% include 'flex/include/script.html' %}
+    </body>
+</html>

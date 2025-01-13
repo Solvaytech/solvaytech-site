@@ -1,0 +1,73 @@
+<section id="contact" class="contact">
+    <div class="container" data-aos="fade-up">
+        <header class="section-header">
+            <h2>İletişim</h2>
+            <p>Bizimle İletişime Geçin</p>
+        </header>
+        <div class="row gy-4">
+            <div class="col-lg-6">
+                <div class="row gy-4">
+                    <div class="col-md-6">
+                        <div class="info-box">
+                            <i class="bi bi-geo-alt"></i>
+                            <a href="https://www.google.com/maps/place/SOLVAYTECH+M%C3%9CHEND%C4%B0SL%C4%B0K/@37.0411013,35.358402,17z/data=!3m1!4b1!4m5!3m4!1s0x15288f30dd5db9b1:0x83ea34b767dd3c8e!8m2!3d37.041097!4d35.3605907">
+                                <h3>Adres</h3>
+                                <p>Balcalı Mah. Güney Kampüs Bulv.<br>Teknokent Sitesi Yönetim ve Kuluçka Merkezi<br>A: Blok, 01330 Sarıçam/Adana</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="info-box">
+                            <i class="bi bi-telephone"></i>
+                            <a href="tel:+903223387171">
+                                <h3>Telefon</h3>
+                                <p>+90 (322) 338 71 71</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="info-box">
+                            <i class="bi bi-envelope"></i>
+                            <a href="mailto:info@ceryan.com.tr">
+                                <h3>Email</h3>
+                                <p>info@ceryan.com.tr</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="info-box">
+                            <i class="bi bi-clock"></i>
+                            <h3>Çalışma Saatleri</h3>
+                            <p>Pazartesi - Cuma<br>09:00 - 18:00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <form method="" class="contact-form">
+                    {% csrf_token %}
+                    <div class="row gy-4">
+                        <div class="col-md-6">
+                            <input type="text" name="name" class="form-control" maxlength="299" placeholder="Adınız Soyadınız" required>
+                        </div>
+                        <div class="col-md-6 ">
+                            <input type="email" class="form-control" name="email" maxlength="299" placeholder="Mail Adresiniz" required>
+                        </div>
+                        <div class="col-md-12">
+                            <input type="text" class="form-control" name="subject" maxlength="999" placeholder="Konu" required>
+                        </div>
+                        <div class="col-md-12">
+                            <textarea class="form-control" name="message" rows="6" maxlength="2499" placeholder="Mesajınız" required></textarea>
+                        </div>
+                        <div class="col-md-12 text-center">
+                            <div class="loading">Mesajınız Gönderiliyor</div>
+                            <div class="error-message"></div>
+                            <div class="sent-message">Mesajınız bize ulaştı. En kısa süre içerisinde iletmiş oldunuz mail adresinize dönüş sağlayacağız.</div>
+                            <button id="post-btn" type="submit">Mesajı Gönder</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section><!-- End Contact Section -->

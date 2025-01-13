@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Projeler - Solvaytech</title>
+        {% include 'flex/include/head.html' %}
+    </head>
+
+    <body>
+    {% include 'flex/include/header/page-header.html' %}
+    <main id="main">
+        <!-- ======= Breadcrumbs ======= -->
+        <section class="breadcrumbs">
+            <div class="container">
+                <ol>
+                    <li><a href="/">Anasayfa</a></li>
+                    <li><a href="/cozumler">Çözümler</a></li>
+                    <li>Projeler</li>
+                </ol>
+                <h2>Projeler</h2>
+            </div>
+        </section><!-- End Breadcrumbs -->
+        <section class="inner-page">
+            <div class="container p-5 mb-4 bg-light rounded-3">
+                <div class="container-fluid">
+                    <header class="section-header"><p>Tübitak-Teydeb</p></header>
+                    <a class="d-7-a" href="/cozumler/projeler/onboard-charger">
+                        <p class="lead display-7">Onboard Charger</p>
+                    </a>
+                    <a class="d-7-a" href="/cozumler/projeler/multiport">
+                        <p class="lead display-7">Multiport</p>
+                    </a>
+                    <hr class="my-4">
+                    <header class="section-header"><p>Kosgeb</p></header>
+                    <a class="d-7-a" href="/cozumler/projeler/ceryan">
+                        <p class="lead display-7">Ceryan</p>
+                    </a>
+                    <hr class="my-4">
+                    <header class="section-header"><p>Avrupa Birliği</p></header>
+                    <p class="lead display-7">Hazırlanıyor</p>
+                </div>
+            </div>
+        </section>
+    </main><!-- End #main -->
+    {% include 'flex/include/flex-footer.html' %}
+    {% include 'flex/include/script.html' %}
+    </body>
+</html>

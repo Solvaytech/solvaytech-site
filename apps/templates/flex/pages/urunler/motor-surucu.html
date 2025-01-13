@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Motor Sürücü - Solvaytech</title>
+        {% include 'flex/include/head.html' %}
+    </head>
+
+    <body>
+    {% include 'flex/include/header/page-header.html' %}
+    <main id="main">
+        <!-- ======= Breadcrumbs ======= -->
+        <section class="breadcrumbs">
+            <div class="container">
+                <ol>
+                    <li><a href="/">Anasayfa</a></li>
+                    <li><a href="/urunler">Ürünler</a></li>
+                    <li>Motor Sürücü</li>
+                </ol>
+                <h2>Motor Sürücü</h2>
+            </div>
+        </section><!-- End Breadcrumbs -->
+        <section class="inner-page">
+            <div class="container p-5 mb-4 bg-light rounded-3">
+                <div class="container-fluid">
+                    <header class="section-header"><p>Motor Sürücü</p></header>
+                    <p style="text-align:justify;">
+                        Fırçasız DC (BLDC) motor sürücüsü, fırçasız bir DC motorun hızını ve yönünü kontrol etmek için kullanılan elektronik bir cihazdır. 
+                        BLDC motorlar daha verimlidir ve geleneksel fırçalı DC motorlara göre daha uzun ömürlüdür. Robotik, elektrikli araçlar, dronlar ve endüstriyel otomasyon gibi çeşitli uygulamalarda yaygın olarak kullanılırlar.
+                        BLDC motor sürücüsü, motoru sürmek için gerekli gücü ve kontrol sinyallerini sağlar. 
+                        Bir mikrodenetleyici veya özel bir sürücü IC'si, MOSFET'ler veya IGBT'ler gibi güç elektroniği bileşenleri, akım algılama devresi ve Hall etkili sensörler gibi geri besleme mekanizmalarından oluşur.
+                        Mikrodenetleyici veya sürücü IC, motor sargılarına enerji vermek için MOSFET'leri veya IGBT'leri belirli bir sırayla açmak ve kapatmak için kontrol sinyalleri üretir. 
+                        Akım algılama devresi motor akımını izler ve optimum performans ve verimlilik için anahtarlama sırasını ayarlamak üzere mikrodenetleyici veya sürücü IC'ye geri bildirim sağlar.
+                        Hall etkisi sensörleri rotorun konumunu algılar ve anahtarlama sırasını rotor konumuyla senkronize etmek için mikrodenetleyiciye veya sürücü IC'ye geri bildirim sağlar. 
+                        Bu, motorun doğru hız ve konum kontrolüne olanak tanır.
+                        Genel olarak, bir motor sürücüsü, bir motorun çalışmasını kontrol etmede ve optimum performansını sağlamada çok önemli bir bileşendir.
+                        Farklı motor teknolojileri ile standart ve ihtiyaca yönelik özel tasarım motor sürücüleri tasarlanıp üretilmektedir.
+                    </p>
+                </div>
+                <div class="row mt-5 align-items-center">
+                    <div class="d-flex justify-content-start col-6">
+                        <a href="/urunler" class="btn btn-primary" role="button"><i class="bi bi-chevron-left"></i> Ürünler </a>
+                    </div>
+                    <div class="d-flex justify-content-end col-6">
+                        <a href="/urunler/mikro-inverter" class="btn btn-primary" role="button">Mikro Inverter <i class="bi bi-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main><!-- End #main -->
+    {% include 'flex/include/flex-footer.html' %}
+    {% include 'flex/include/script.html' %}
+    </body>
+</html>

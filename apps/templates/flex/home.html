@@ -1,0 +1,380 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Anasayfa - Solvaytech</title>
+    {% include 'flex/include/head.html' %}
+  </head>
+
+  <body>
+    {% include 'flex/include/header/home-header.html' %}
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="hero d-flex align-items-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 d-flex flex-column justify-content-center">
+            <h1 data-aos="fade-up">İşinizi büyütmek için modern çözümler sunuyoruz</h1>
+            <h2 data-aos="fade-up" data-aos-delay="400">Mühendislik fikirlerinizi hayata geçirebilecek yetenekli bir ekibiz.</h2>
+          </div>
+          <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
+            <img src="{% static 'assets/flex/img/png/hero-img.png'%}" class="img-fluid" alt="">
+          </div>
+        </div>
+      </div>
+    </section><!-- End Hero -->
+
+    <main id="main">
+      <!-- ======= About Section ======= -->
+      <section id="about" class="about">
+        <div class="container" data-aos="fade-up">
+          <div class="row gx-0">
+            <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
+              <div class="content">
+                <h3>BİZ KİMİZ?</h3>
+                <h2>
+                  Solvaytech, 2020 yılında bu yana Çukurova Teknokent'te elektrikli araçlar alanında faaliyet gösteren bir Ar-Ge ve İnovasyon firmasıdır.
+                </h2>
+                <p>
+                  "Yenilikçi fikirler ile sürdürülebilir bir gelecek" felsefesini benimseyen firmamız; mikromobilite araçların şehir içi ulaşımda verimli, çevreci ve ekonomik avantaj sağlayacağını düşünerek CERYAN’ın yerli üretimi üzerine çalışarak ön siparişini halka açmıştır.
+                </p>
+                <div class="text-center text-lg-start">
+                  <a href="/about" class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
+                    <span>Daha Fazla</span>
+                    <i class="bi bi-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
+              <img src="{% static 'assets/flex/img/png/about.png' %}" class="img-fluid" alt="">
+            </div>
+          </div>
+        </div>
+      </section><!-- End About Section -->
+      <!-- ======= Features Section ======= -->
+      <section id="cozumlerimiz" class="cozumlerimiz">
+        <div class="container" data-aos="fade-up">
+          <header class="section-header">
+            <h2>ÇÖZÜMLERİMİZ</h2>
+            <p>Firmamız, yenilikçi ve kaliteli ürünleriyle müşterilerine çözüm odaklı hizmetler sunmaktadır.</p>
+          </header>
+          <div class="row align-items-center">
+            <div class="col-md-6">
+              <img src="{% static 'assets/flex/img/png/features.png' %}" class="img-fluid" alt="">
+            </div>
+            <div class="col-md-6 mt-5 mt-lg-0 d-flex">
+              <div class="row align-self-center gy-4">
+                <div class="col-md-6" data-aos="zoom-out" data-aos-delay="200">
+                  <a href="/cozumler">
+                    <div class="feature-box d-flex align-items-center">
+                      <i class="bi bi-check"></i>
+                      <h3>Danışmanlık</h3>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-md-6" data-aos="zoom-out" data-aos-delay="300">
+                  <a href="/cozumler">
+                    <div class="feature-box d-flex align-items-center">
+                      <i class="bi bi-check"></i>
+                      <h3>Otomasyon</h3>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-md-6" data-aos="zoom-out" data-aos-delay="400">
+                  <a href="/cozumler">
+                    <div class="feature-box d-flex align-items-center">
+                      <i class="bi bi-check"></i>
+                      <h3>Bakım Onarım Hizmetleri</h3>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-md-6" data-aos="zoom-out" data-aos-delay="500">
+                  <a href="/cozumler/projeler">
+                    <div class="feature-box d-flex align-items-center">
+                      <i class="bi bi-check"></i>
+                      <h3>Projeler</h3>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div> <!-- / row -->
+          <!-- Feature Tabs -->
+          <div class="row feture-tabs" data-aos="fade-up">
+            <div class="col-lg-6">
+              <h3>CERYAN, %100 Elektrikli Şehrin Yerlisi</h3>
+              <!-- Tabs -->
+              <ul class="nav nav-pills mb-3">
+                <li>
+                  <a class="nav-link active" data-bs-toggle="pill" href="#tab1">CERYAN</a>
+                </li>
+                <li>
+                  <a class="nav-link" data-bs-toggle="pill" href="#tab2">TASARIM</a>
+                </li>
+                <li>
+                  <a class="nav-link" data-bs-toggle="pill" href="#tab3">TEKNİK VERİ</a>
+                </li>
+              </ul><!-- End Tabs -->
+              <!-- Tab Content -->
+              <div class="tab-content">
+                <div class="tab-pane fade show active" id="tab1">
+                  <p>
+                    Solvaytech bünyesinde geçen 2 yılda çevreci çözümümüz olarak ortaya koyduğumuz projemiz.
+                  </p>
+                  <div class="d-flex align-items-center mb-2">
+                    <i class="bi bi-check2"></i>
+                    <h4>Sıfır emisyonlu elektrikli aracımız Ceryan, şehir içi ulaşım sorununa alternatif bir çözümdür.</h4>
+                  </div>
+                  <p>
+                    Ceryan elektrikli araç; yenilikçi, çevre dostu ve ekonomik ulaşım seçeneği sunar.
+                    Kirletici emisyonları ortadan kaldırır. <br>
+                    Ceryan, düşük şarj maliyeti ile ekonomik ulaşım seçeneğidir.
+                  </p>
+                  <div class="d-flex align-items-center mb-2">
+                    <i class="bi bi-check2"></i>
+                    <h4>Ceryan modelimizi 16 yaşından itibaren B1 sınıfı ehliyete sahip herkes kullanabilir.</h4>
+                  </div>
+                </div><!-- End Tab 1 Content -->
+                <div class="tab-pane fade show" id="tab2">
+                  <p>•	CERYAN, yenilikçi tasarımıyla özgün görünüme sahiptir.</p>
+                  <div class="d-flex align-items-center mb-2">
+                    <i class="bi bi-check2"></i>
+                    <h4>Şehir içi ulaşımda hafif ve küçük olması kolay park edilebilmesinde pratiklik ve konfor avantajı sağlar.</h4>
+                  </div>
+                  <p>•	L6e Quadricycle sınıf araçlara göre geniş bagaj hacmi ile fark yaratıyor.</p>
+                  <div class="d-flex align-items-center mb-2">
+                    <i class="bi bi-check2"></i>
+                    <h4>Kendi sınıfının en iyi bagaj hacmi ile göz dolduruyor.</h4>
+                  </div>
+                  <p>•	Özel park yeri olmayan dairelerde yaşayan kullanıcılar için taşınabilir batarya tasarımı mevcuttur.</p>
+                  <div class="d-flex align-items-center mb-2">
+                    <i class="bi bi-check2"></i>
+                    <h4>Elektrikli araç kullanıcısı bataryayı kolay bir şekilde çıkartarak evde veya iş yerinde şarj edebilecek.</h4>
+                  </div>
+                </div><!-- End Tab 2 Content -->
+                <div class="tab-pane fade show" id="tab3">
+                  <p>
+                    Aracımızın Teknik Verileri:
+                  </p>
+                  <div class="d-flex align-items-center mb-2">
+                    <i class="bi bi-check2"></i>
+                    <h4>Azami Hız: 45 km/s</h4>
+                  </div>
+                  <div class="d-flex align-items-center mb-2">
+                    <i class="bi bi-check2"></i>
+                    <h4>Menzil: 60km </h4>
+                  </div>
+                  <div class="d-flex align-items-center mb-2">
+                    <i class="bi bi-check2"></i>
+                    <h4>Batarya: 48V 52.5Ah</h4>
+                  </div>
+                  <div class="d-flex align-items-center mb-2">
+                    <i class="bi bi-check2"></i>
+                    <h4>Motor: 5kW</h4>
+                  </div>
+                  <p>Daha fazla bilgi ve önsipariş için <a href="https://ceryan.com.tr">www.ceryan.com.tr</a></p>
+                </div><!-- End Tab 3 Content -->
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <img src="{% static 'assets/flex/img/galeri/ceryan.webp' %}" class="img-fluid" alt="">
+            </div>
+          </div><!-- End Feature Tabs -->
+        </div>
+      </section><!-- End Features Section -->
+      <!-- ======= Portfolio Section ======= -->
+      <section id="portfolio" class="portfolio">
+        <div class="container" data-aos="fade-up">
+          <header class="section-header">
+            <h2>GALERİ</h2>
+            <p>Son çalışmalarımızdan kesitler</p>
+          </header>
+          <div class="row" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-lg-12 d-flex justify-content-center">
+              <ul id="portfolio-flters">
+                <li data-filter="*" class="filter-active">Hepsi</li>
+                <li data-filter=".filter-ceryan">Ceryan</li>
+                <li data-filter=".filter-entegre">Entegre</li>
+              </ul>
+            </div>
+          </div>
+          <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
+            <div class="col-lg-4 col-md-6 portfolio-item filter-ceryan">
+              <div class="portfolio-wrap">
+                <img src="{% static 'assets/flex/img/galeri/resized/ceryan/ceryan-1.jpg' %}" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Ceryan - 1</h4>
+                  <p>Ceryan</p>
+                  <div class="portfolio-links">
+                    <a href="{% static 'assets/flex/img/galeri/resized/ceryan/ceryan-1.jpg' %}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Ceryan - 1"><i class="bi bi-plus"></i></a>
+                    <a href="/cozumler/projeler/ceryan" title="Daha Fazla"><i class="bi bi-link"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item filter-ceryan">
+              <div class="portfolio-wrap">
+                <img src="{% static 'assets/flex/img/galeri/resized/ceryan/ceryan-2.jpg' %}" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Ceryan - 2</h4>
+                  <p>Ceryan</p>
+                  <div class="portfolio-links">
+                    <a href="{% static 'assets/flex/img/galeri/resized/ceryan/ceryan-2.jpg' %}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Ceryan - 2"><i class="bi bi-plus"></i></a>
+                    <a href="/cozumler/projeler/ceryan" title="Daha Fazla"><i class="bi bi-link"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item filter-entegre">
+              <div class="portfolio-wrap">
+                <img src="{% static 'assets/flex/img/galeri/resized/entegre/dc-motor-driver-kontrolcü.jpg' %}" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>DC Motor Sürücü Kontrolcüsü</h4>
+                  <p>Entegre</p>
+                  <div class="portfolio-links">
+                    <a href="{% static 'assets/flex/img/galeri/resized/entegre/dc-motor-driver-kontrolcü.jpg' %}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="DC Motor Sürücü Kontrolcüsü"><i class="bi bi-plus"></i></a>
+                    <a href="/cozumler" title="Daha Fazla"><i class="bi bi-link"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item filter-entegre">
+              <div class="portfolio-wrap">
+                <img src="{% static 'assets/flex/img/galeri/resized/entegre/dc-motor-sürücü.jpg' %}" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>DC Motor Sürücü</h4>
+                  <p>Entegre</p>
+                  <div class="portfolio-links">
+                    <a href="{% static 'assets/flex/img/galeri/resized/entegre/dc-motor-sürücü.jpg' %}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="DC Motor Sürücü"><i class="bi bi-plus"></i></a>
+                    <a href="/cozumler" title="Daha Fazla"><i class="bi bi-link"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item filter-ceryan">
+              <div class="portfolio-wrap">
+                <img src="{% static 'assets/flex/img/galeri/resized/ceryan/ceryan-3.jpg' %}" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Ceryan - 3</h4>
+                  <p>Ceryan</p>
+                  <div class="portfolio-links">
+                    <a href="{% static 'assets/flex/img/galeri/resized/ceryan/ceryan-3.jpg' %}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Ceryan - 3"><i class="bi bi-plus"></i></a>
+                    <a href="/cozumler/projeler/ceryan" title="Daha Fazla"><i class="bi bi-link"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item filter-entegre">
+              <div class="portfolio-wrap">
+                <img src="{% static 'assets/flex/img/galeri/resized/entegre/elektrikli-direksiyon-kontrol.jpg' %}" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Elektrikli Direksiyon Kontrolcüsü</h4>
+                  <p>Entegre</p>
+                  <div class="portfolio-links">
+                    <a href="{% static 'assets/flex/img/galeri/resized/entegre/elektrikli-direksiyon-kontrol.jpg' %}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Elektrikli Direksiyon Kontrolcüsü"><i class="bi bi-plus"></i></a>
+                    <a href="/cozumler" title="Daha Fazla"><i class="bi bi-link"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item filter-entegre">
+              <div class="portfolio-wrap">
+                <img src="{% static 'assets/flex/img/galeri/resized/entegre/gaz-pedali.jpg' %}" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Gaz Pedali Kontrol Ünitesi</h4>
+                  <p>Entegre</p>
+                  <div class="portfolio-links">
+                    <a href="{% static 'assets/flex/img/galeri/resized/entegre/gaz-pedali.jpg' %}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Gaz Pedali Kontrol Ünitesi"><i class="bi bi-plus"></i></a>
+                    <a href="/cozumler" title="Daha Fazla"><i class="bi bi-link"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item filter-entegre">
+              <div class="portfolio-wrap">
+                <img src="{% static 'assets/flex/img/galeri/resized/entegre/mikroinverter.jpg' %}" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Mikro Inverter</h4>
+                  <p>Entegre</p>
+                  <div class="portfolio-links">
+                    <a href="{% static 'assets/flex/img/galeri/resized/entegre/mikroinverter.jpg' %}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Mikro Inverter"><i class="bi bi-plus"></i></a>
+                    <a href="/cozumler" title="Daha Fazla"><i class="bi bi-link"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item filter-entegre">
+              <div class="portfolio-wrap">
+                <img src="{% static 'assets/flex/img/galeri/resized/entegre/onboard-charger.jpg' %}" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Onboard Charger</h4>
+                  <p>Entegre</p>
+                  <div class="portfolio-links">
+                    <a href="{% static 'assets/flex/img/galeri/resized/entegre/onboard-charger.jpg' %}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Onboard Charger"><i class="bi bi-plus"></i></a>
+                    <a href="/cozumler" title="Daha Fazla"><i class="bi bi-link"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item filter-entegre">
+              <div class="portfolio-wrap">
+                <img src="{% static 'assets/flex/img/galeri/resized/entegre/accplc.jpg' %}" class="img-fluid" alt="Yeni Entegre">
+                <div class="portfolio-info">
+                  <h4>ACC PLC</h4>
+                  <p>Entegre</p>
+                  <div class="portfolio-links">
+                    <a href="{% static 'assets/flex/img/galeri/resized/entegre/accplc.jpg' %}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="ACC PLC-01"><i class="bi bi-plus"></i></a>
+                    <a href="/urunler/acc-plc" title="Daha Fazla"><i class="bi bi-link"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item filter-entegre">
+              <div class="portfolio-wrap">
+                <img src="{% static 'assets/flex/img/galeri/resized/entegre/acsbirlesik.jpg' %}" class="img-fluid" alt="Yeni Entegre">
+                <div class="portfolio-info">
+                  <h4>ACS 200</h4>
+                  <p>Entegre</p>
+                  <div class="portfolio-links">
+                    <a href="{% static 'assets/flex/img/galeri/resized/entegre/acsbirlesik.jpg' %}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="ACS 200-01"><i class="bi bi-plus"></i></a>
+                    <a href="/urunler/acs-200" title="Daha Fazla"><i class="bi bi-link"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item filter-entegre">
+              <div class="portfolio-wrap">
+                <img src="{% static 'assets/flex/img/galeri/resized/entegre/ssrdimer.jpg' %}" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>ASSR DIM PLC</h4>
+                  <p>Entegre</p>
+                  <div class="portfolio-links">
+                    <a href="{% static 'assets/flex/img/galeri/resized/entegre/ssrdimer.jpg' %}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="ASSR DIM PLC-01"><i class="bi bi-plus"></i></a>
+                    <a href="/urunler/assr-dim-plc" title="Daha Fazla"><i class="bi bi-link"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item filter-entegre">
+              <div class="portfolio-wrap">
+                <img src="{% static 'assets/flex/img/galeri/resized/entegre/espsm3.jpg' %}" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>ESP SM3</h4>
+                  <p>Entegre</p>
+                  <div class="portfolio-links">
+                    <a href="{% static 'assets/flex/img/galeri/resized/entegre/espsm3.jpg' %}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="ESP SM3-01"><i class="bi bi-plus"></i></a>
+                    <a href="/urunler/esp-sm3" title="Daha Fazla"><i class="bi bi-link"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section><!-- End Portfolio Section -->
+      <!-- ======= Contact Section ======= -->
+      {% include 'flex/include/contact/contact.html' %}
+    </main><!-- End #main -->
+    {% include 'flex/include/flex-footer.html' %}
+    {% include 'flex/include/script.html' %}
+  </body>
+</html>

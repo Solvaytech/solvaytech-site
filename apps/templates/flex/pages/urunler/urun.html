@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Ürünler - Solvaytech</title>
+        {% include 'flex/include/head.html' %}
+    </head>
+
+    <body>
+    {% include 'flex/include/header/page-header.html' %}
+    <main id="main">
+        <!-- ======= Breadcrumbs ======= -->
+        <section class="breadcrumbs">
+            <div class="container">
+                <ol>
+                    <li><a href="/">Anasayfa</a></li>
+                    <li>Ürünler</li>
+                </ol>
+                <h2>Ürünler</h2>
+            </div>
+        </section><!-- End Breadcrumbs -->
+        <section class="inner-page">
+            <div class="container p-5 mb-4 bg-light rounded-3">
+                <div class="container-fluid">
+                    <header class="section-header"><p>Ürünler</p></header>
+                    <a class="d-7-a" href="/urunler/dc-dc">
+                        <p class="lead display-7">DC/DC Çeviriciler</p>
+                    </a>
+                    <hr>
+                    <a class="d-7-a" href="/urunler/motor-surucu">
+                        <p class="lead display-7">Motor Sürücüler</p>
+                    </a>
+                    <hr>
+                    <a class="d-7-a" href="/urunler/mikro-inverter">
+                        <p class="lead display-7">Mikro Inverter</p>
+                    </a>
+                    <hr>
+                    <a class="d-7-a" href="/urunler/bms">
+                        <p class="lead display-7">Batarya Yönetim Sistemi</p>
+                    </a>
+                    <hr>
+                    <a class="d-7-a" href="/urunler/aais">
+                        <p class="lead display-7">Akıllı Arı İzleme Sistemi</p>
+                    </a>
+                    <hr>
+                    <p class="lead display-7">Deney Setleri</p>
+                    <ul>
+                        <li>
+                            <a class="d-7-a" href="/urunler/stk">
+                                <p class="lead display-7">Sıcak Tel Kesme</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="d-7-a" href="/urunler/bty">
+                                <p class="lead display-7">Batarya Termal Yönetim Test</p>
+                            </a>
+                        </li>
+                    </ul>
+                    <hr>
+                    <a class="d-7-a" href="/urunler/acc-plc">
+                        <p class="lead display-7">ACC-PLC-01</p>
+                    </a>
+                    <hr>
+                    <a class="d-7-a" href="/urunler/acs-200">
+                        <p class="lead display-7">ACS-200-01</p>
+                    </a>
+                    <hr>
+                    <a class="d-7-a" href="/urunler/assr-dim-plc">
+                        <p class="lead display-7">ASSR-DIM-PLC</p>
+                    </a>
+                    <hr>
+                    <a class="d-7-a" href="/urunler/esp-sm3">
+                        <p class="lead display-7">ESP-SM3-01</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main><!-- End #main -->
+    {% include 'flex/include/flex-footer.html' %}
+    {% include 'flex/include/script.html' %}
+    </body>
+</html>

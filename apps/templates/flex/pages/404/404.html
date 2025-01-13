@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>404 - Solvaytech</title>
+        {% include 'flex/include/head.html' %}
+        <link rel="stylesheet" type="text/css" href="{% static 'assets/flex/css/404.min.css'%}" />
+    </head>
+    <body background="{% static 'assets/flex/img/404-images/bg_purple.png'%}" class="bg-purple">
+        <div class="stars">
+            <div class="custom-navbar">
+                <div class="brand-logo">
+                    <a href="/">
+                        <img src="{% static 'assets/flex/img/404-images/solvaytech_logo.png'%}" width="280px">
+                    </a>
+                </div>
+            </div>
+            <div class="central-body">
+                <img class="image-404" src="{% static 'assets/flex/img/404-images/404.svg'%}" width="300px">
+                <a href="/" class="btn-go-home" >GO BACK HOME</a>
+            </div>
+            <div class="objects">
+                <img class="object_rocket" src="{% static 'assets/flex/img/404-images/rocket.svg'%}" width="40px">
+                <div class="earth-moon">
+                    <img class="object_earth" src="{% static 'assets/flex/img/404-images/earth.svg'%}" width="100px">
+                    <img class="object_moon" src="{% static 'assets/flex/img/404-images/moon.svg'%}" width="80px">
+                </div>
+                <div class="box_astronaut">
+                    
+                    <img class="object_astronaut" src="{% static 'assets/flex/img/404-images/astronaut.svg'%}" width="140px">
+                </div>
+            </div>
+            <div class="glowing_stars">
+                <div src="{% static 'assets/flex/img/404-images/overlay_stars.svg'%}" class="star"></div>
+                <div src="{% static 'assets/flex/img/404-images/overlay_stars.svg'%}" class="star"></div>
+                <div src="{% static 'assets/flex/img/404-images/overlay_stars.svg'%}" class="star"></div>
+                <div src="{% static 'assets/flex/img/404-images/overlay_stars.svg'%}" class="star"></div>
+                <div src="{% static 'assets/flex/img/404-images/overlay_stars.svg'%}" class="star"></div>
+            </div>
+        </div>
+    </body>
+</html>

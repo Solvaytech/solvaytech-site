@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Multiport - Solvaytech</title>
+        {% include 'flex/include/head.html' %}
+    </head>
+
+    <body>
+    {% include 'flex/include/header/page-header.html' %}
+    <main id="main">
+        <!-- ======= Breadcrumbs ======= -->
+        <section class="breadcrumbs">
+            <div class="container">
+                <ol>
+                    <li><a href="/">Anasayfa</a></li>
+                    <li><a href="/cozumler">Çözümler</a></li>
+                    <li><a href="/cozumler/projeler">Projeler</a></li>
+                    <li>Multiport</li>
+                </ol>
+                <h2>Multiport</h2>
+            </div>
+        </section><!-- End Breadcrumbs -->
+        <section class="inner-page">
+            <div class="container p-5 mb-4 bg-light rounded-3">
+                <div class="container-fluid">
+                    <header class="section-header"><p>Multiport</p></header>
+                    <p style="text-align:justify;">
+                        Yakın gelecekte karşılaşılacak olan lityum ve enerji darboğazı nedeniyle elektrikli araçlara entegre edilmesi kuvvetle muhtemel beklenen fotovoltaik paneller ve yakıt hücreleri ile hem şebekeye olan bağlılık azalacak hem de elektrikli araçların menzili artacaktır. 
+                        Böyle bir tasarım için birden fazla DC-DC dönüştürücülere ya da maliyet ve boyut etkin yüksek performanslı çok portlu entegre dönüştürücülere ihtiyaç vardır. 
+                        Hedeflenen çok portlu dönüştürücü, PV panel ve/veya yakıt hücresi ile çalışabilen araçların eksikliği olan röle tabanlı enerji yönetim sistemine karşı çoklu kaynakların eş zamanlı yönetimini mümkün kılacaktır. 
+                        Çok portlu entegre dönüştürücüler, ülkemiz ve firmamız için yeni bir ürün sınıfındadır. Ülkemizde yerli tasarım ve üretim, ticari bir ürüne rastlanılmamaktadır.
+                    </p>
+                </div>
+                <div class="row mt-5 align-items-center">
+                    <div class="d-flex justify-content-start col-6">
+                        <a href="/cozumler/projeler" class="btn btn-primary" role="button"><i class="bi bi-chevron-left"></i> Projeler </a>
+                    </div>
+                    <div class="d-flex justify-content-end col-6">
+                        <a href="/cozumler/projeler/onboard-charger" class="btn btn-primary" role="button">Onboard Charger <i class="bi bi-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main><!-- End #main -->
+    {% include 'flex/include/flex-footer.html' %}
+    {% include 'flex/include/script.html' %}
+    </body>
+</html>

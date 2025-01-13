@@ -1,0 +1,516 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Teklif Al - Solvaytech</title>
+        {% include 'flex/include/head.html' %}
+        <style>
+            .card {
+                background-color: #FFF;
+                border-radius: 25px;
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+                padding: 40px;
+                z-index: 0;
+                }
+
+            .heading {
+                font-weight: normal;
+                }
+
+            .desc {
+                font-size: 14px;
+                }
+
+            #progress-bar {
+                transition: width 0.5s ease-in-out;
+                background: #b9d4ec;
+                width: 0;
+            }
+
+            .sub-heading {
+                font-weight: 500;
+                }
+
+            .yellow-text {
+                color: #F9A825;
+                }
+
+            fieldset.show {
+                display: block;
+                }
+
+            fieldset {
+                position: inherit;
+                transition: all .3s ease-in-out;
+                }
+
+            .radio {
+                display: inline-block;
+                border-radius: 0;
+                box-sizing: border-box;
+                cursor: pointer;
+                color: #BDBDBD;
+                font-weight: 500;
+                -webkit-filter: grayscale(100%);
+                -moz-filter: grayscale(100%);
+                -o-filter: grayscale(100%);
+                -ms-filter: grayscale(100%);
+                filter: grayscale(100%); 
+                }
+
+            .radio:hover {
+                box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.1);
+                }
+
+            .radio.selected {
+                border: 1px solid #29B6F6;
+                box-shadow: 0px 8px 16px 0px #EEEEEE;
+                color: #29B6F6 !important;
+                -webkit-filter: grayscale(0%);
+                -moz-filter: grayscale(0%);
+                -o-filter: grayscale(0%);
+                -ms-filter: grayscale(0%);
+                filter: grayscale(0%);
+                transform: translate3d(0px, 0px, 0px) scale3d(1.05, 1.05, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                background-color: rgb(244, 254, 245);    
+            }
+
+            .card-block {
+                border: 1px solid #CFD8DC;
+                width: 45%;
+                margin: 2.5%;
+                padding: 20px 25px 15px 25px;
+                transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                transform-style: preserve-3d;
+                transition: transform 0.3s ease-in-out;
+                }
+
+            @media screen and (max-width: 768px) {
+                .card-block {
+                    padding: 20px 20px 0px 20px;
+                    height: 250px;
+                    }
+            }
+
+            .icon {
+                width: 85px;
+                height: 100px;
+                }
+
+            .image-icon {
+                width: 85px;
+                height: 100px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 20px;
+                }
+
+            select, input, textarea {
+                padding: 8px 15px 8px 15px;
+                border-radius: 0px;
+                margin-bottom: 25px;
+                margin-top: 2px;
+                width: 100%;
+                box-sizing: border-box;
+                color: #2C3E50;
+                background-color: #ECEFF1;
+                border: 1px solid #ccc;
+                font-size: 16px;
+                letter-spacing: 1px;
+                }
+
+            select:focus, input:focus, textarea:focus {
+                -moz-box-shadow: none !important;
+                -webkit-box-shadow: none !important;
+                box-shadow: none !important;
+                border: 1px solid skyblue !important;
+                outline-width: 0;
+                }
+
+            button:focus {
+                -moz-box-shadow: none !important;
+                -webkit-box-shadow: none !important;
+                box-shadow: none !important;
+                outline-width: 0;
+                }
+
+            textarea {
+                height: 100px;
+                }
+
+            .fit-image {
+                width: 100%;
+                object-fit: cover;
+                }
+
+            .btn-block {
+                border-radius: 5px;
+                height: 50px;
+                font-weight: 500;
+                cursor: pointer;
+                }
+
+            .fa-long-arrow-right {
+                float: right;
+                margin-top: 4px;
+                }
+
+            .fa-long-arrow-left {
+                float: left;
+                margin-top: 4px;
+                }
+            .error {
+                border-color: #ff2d26;
+            }
+            .pass {
+                border-color: #0bda51;
+            }
+            .btn {
+                padding: 12px 16px;
+                cursor: pointer;
+                border-width: 1px;
+                border-radius: 5px;
+                font-size: 14px;
+                font-weight: 500;
+                -webkit-box-shadow: 0px 10px 20px -6px rgba(0, 0, 0, 0.12);
+                -moz-box-shadow: 0px 10px 20px -6px rgba(0, 0, 0, 0.12);
+                box-shadow: 0px 10px 20px -6px rgba(0, 0, 0, 0.12);
+                overflow: hidden;
+                position: relative;
+                z-index: 0;
+                -moz-transition: all 0.3s ease;
+                -o-transition: all 0.3s ease;
+                -webkit-transition: all 0.3s ease;
+                -ms-transition: all 0.3s ease;
+                transition: all 0.3s ease; 
+            }
+            .btn:after {
+                position: absolute;
+                top: 0;
+                left: -100%;
+                bottom: 0;
+                content: '';
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+                -moz-transition: all 0.2s ease;
+                -o-transition: all 0.2s ease;
+                -webkit-transition: all 0.2s ease;
+                -ms-transition: all 0.2s ease;
+                transition: all 0.2s ease; 
+            }
+            .btn span {
+                z-index: 1; 
+            }
+            .btn:hover, .btn:active, .btn:focus {
+                outline: none !important; 
+            }
+            .btn:hover:after {
+                left: 0; 
+            }
+            .btn.btn-primary {
+                background: #3e64ff;
+                border-color: #3e64ff;
+                color: #fff; 
+            }
+            .btn.btn-primary:hover, .btn.btn-primary:focus {
+                border-color: #002ad7 !important; 
+            }
+            .btn.btn-primary:hover:after, .btn.btn-primary:focus:after {
+                background: #002ad7 !important; 
+            }
+            .btn.btn-tertiary {
+                color: #fff;
+                background: #ff4893;
+                border-color: #ff4893;
+            }
+            .btn.btn-tertiary:hover, .btn.btn-tertiary:focus {
+                border-color: #e1005c !important; 
+            }
+            .btn.btn-tertiary:hover:after, .btn.btn-tertiary:focus:after {
+                background: #e1005c !important; 
+            }
+            @keyframes opening {
+                0% {
+                    opacity: 0;
+                    top: -61px;
+                }
+                5% {
+                    opacity: .5;
+                    top: -58px;
+                }
+                10% {
+                    opacity: .1;
+                    top: -55px;
+                }
+                15% {
+                    opacity: .15;
+                    top: -52px;
+                }
+                20% {
+                    opacity: .2;
+                    top: -48px;
+                }
+                25% {
+                    opacity: .25;
+                    top: -45px;
+                }
+                30% {
+                    opacity: .3;
+                    top: -42px;
+                }
+                35% {
+                    opacity: .35;
+                    top: -39px;
+                }
+                40% {
+                    opacity: .4;
+                    top: -36px;
+                }
+                45% {
+                    opacity: .45;
+                    top: -33px;
+                }
+                50% {
+                    opacity: .55;
+                    top: -30px;
+                }
+                55% {
+                    opacity: .55;
+                    top: -27px;
+                }
+                60% {
+                    opacity: .6;
+                    top: -24px;
+                }
+                65% {
+                    opacity: .65;
+                    top: -21px;
+                }
+                70% {
+                    opacity: .7;
+                    top: -18px;
+                }
+                75% {
+                    opacity: .75;
+                    top: -15px;
+                }
+                80% {
+                    opacity: .8;
+                    top: -12px;
+                }
+                85% {
+                    opacity: .85;
+                    top: -9px;
+                }
+                90% {
+                    opacity: .9;
+                    top: -6px;
+                }
+                95% {
+                    opacity: .95;
+                    top: -3px;
+                }
+                100% {
+                    opacity: 1;
+                    top: 0; 
+                }
+            }
+            .fieldset-animation {
+                animation: opening .5s;
+            }
+            .fieldset-none {
+                display: none;
+            }
+            .refresh {
+                transition: all .3s ease-in-out;
+            }
+            .prev {
+                transition: all .3s ease-in-out;
+            }
+            .button-opacity {
+                opacity: 0;
+            }
+            .button-dn{
+                display:none;
+            }
+            .product-form .loading {
+                display: none;
+                background: #fff;
+                text-align: center;
+                padding: 15px;
+                margin-bottom: 24px;
+            }
+            .product-form .loading:before {
+                content: "";
+                display: inline-block;
+                border-radius: 50%;
+                width: 24px;
+                height: 24px;
+                margin: 0 10px -6px 0;
+                border: 3px solid #18d26e;
+                border-top-color: #eee;
+                animation: animate-loading 1s linear infinite;
+            }
+            .product-form .sent-message {
+                display: none;
+                color: #fff;
+                background: #18d26e;
+                text-align: center;
+                padding: 15px;
+                margin-bottom: 24px;
+                font-weight: 600;
+            }
+            .product-form .error-message {
+                display: none;
+                color: #fff;
+                background: #ed3c0d;
+                text-align: left;
+                padding: 15px;
+                margin-bottom: 24px;
+                font-weight: 600;
+            }
+
+            @keyframes animate-loading {
+                0% {
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        {% include 'flex/include/header/page-header.html' %}
+        <main id="main">
+            <!-- ======= Breadcrumbs ======= -->
+            <section class="breadcrumbs">
+                    <div class="container">
+                        <ol>
+                            <li><a href="/">Anasayfa</a></li>
+                            <li>Teklif Al</li>
+                        </ol>
+                        <h2>Teklif Al</h2>
+                    </div>
+            </section><!-- End Breadcrumbs -->
+            <section class="inner-page">
+                <form method="" class="product-form">
+                    {% csrf_token %}
+                    <div class="snippet-body">
+                        <div class="container-fluid px-1 py-5 mx-auto">
+                            <div class="row d-flex justify-content-center">
+                                <div class="col-xl-9 col-lg-10 col-md-11">
+                                    <div class="card b-0">
+                                        <button id="refresh" style="position:absolute;right:50px;" type="button" class="btn mb-2 mb-md-0 btn-tertiary refresh button-dn"><i class="bi bi-arrow-clockwise"></i></button>
+                                        <h3 class="heading">TEST</h3>
+                                        <p class="desc">test test test <span class="yellow-text">123 456 7891</span><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi blandit arcu quis nisl tincidunt, quis fringilla tortor blandit. Morbi condimentum lacinia consectetur.</p>
+                                        <div class="progress mb-4">
+                                            <div id="progress-bar"></div>
+                                        </div>
+                                        <fieldset class="fieldset-none">
+                                            <div class="form-card">
+                                                <h5 class="sub-heading">Hizmetleri Seçiniz</h5>
+                                                <div class="row px-1 radio-group">
+                                                    <div id="hizmet1" class="card-block text-center radio">
+                                                        <div class="image-icon">
+                                                            <img class="icon icon1 fit-image" src="{% static 'assets/flex/img/test/motherboard.png' %}">
+                                                        </div>
+                                                        <p class="sub-desc">Lorem ipsum dolor sit amet</p>
+                                                    </div>
+                                                    <div id="hizmet2" class="card-block text-center radio">
+                                                        <div class="image-icon">
+                                                            <img class="icon icon1 fit-image" src="https://i.imgur.com/HnX40f4.png">
+                                                        </div>
+                                                        <p class="sub-desc">Lorem ipsum dolor sit amet</p>
+                                                    </div>
+                                                    <div id="hizmet3" class="card-block text-center radio">
+                                                        <div class="image-icon">
+                                                            <img class="icon icon1 fit-image" src="https://i.imgur.com/ynKYPkk.png">
+                                                        </div>
+                                                        <p class="sub-desc">Lorem ipsum dolor sit amet</p>
+                                                    </div>
+                                                    <div id="hizmet4" class="card-block text-center radio">
+                                                        <div class="image-icon">
+                                                            <img class="icon icon1 fit-image" src="https://i.imgur.com/6qK7u8Q.png">
+                                                        </div>
+                                                        <p class="sub-desc">Lorem ipsum dolor sit amet</p>
+                                                    </div>
+                                                    <div id="total-product" product="" style="display:none;"></div>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                        <fieldset class="fieldset-none">
+                                            <div class="form-card">
+                                                <h5 class="sub-heading mb-4">Kişisel Bilgiler</h5>
+                                                <label class="text-danger mb-3">* Gerekli</label>
+                                                <div class="form-group">
+                                                    <label class="form-control-label">İsminiz * :</label>
+                                                    <input type="text" id="isim" name="isim" placeholder="" class="form-control">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="form-control-label">Soyadınız * :</label>
+                                                    <input type="text" id="soyisim" name="soyisim" placeholder="" class="form-control">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="form-control-label">Email * :</label>
+                                                    <input type="text" id="email" name="email" placeholder="" class="form-control">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="form-control-label">Telefon Numarası * :</label>
+                                                    <input type="text" id="tel" name="tel" placeholder="(555) 555-5555" class="form-control telephone">
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                        <fieldset class="fieldset-none">
+                                            <div class="form-card">
+                                                <h5 class="sub-heading mb-4">Şirket Detayları</h5>
+                                                <label class="text-danger mb-3">* Gerekli</label>
+                                                <div class="form-group">
+                                                    <label class="form-control-label">Şirket İsmi * :</label>
+                                                    <input type="text" id="sirket" name="sirket" placeholder="" class="form-control">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="form-control-label">Posta Kodu * :</label>
+                                                    <input type="text" id="posta" name="posta" placeholder="" class="form-control">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="form-control-label">Şehir * :</label>
+                                                    <input type="text" id="sehir" name="sehir" placeholder="" class="form-control">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="form-control-label">İlçe * :</label>
+                                                    <input type="text" id="ilce" name="ilce" placeholder="" class="form-control">
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                        <fieldset class="fieldset-none">
+                                            <div class="form-card">
+                                                <h5 class="sub-heading mb-4">Lorem ipsum!</h5>
+                                                <p class="message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi blandit arcu quis nisl tincidunt, quis fringilla tortor blandit. Morbi condimentum lacinia consectetur.</p>
+                                                <div id = "message">
+                                                    <textarea name="message" maxlength="1000" placeholder="Siparişiniz için iletmek istediğiniz mesajınızı buraya yazınız."></textarea>
+                                                </div>
+                                                <div class="loading">Mesajınız Gönderiliyor</div>
+                                                <div class="error-message"></div>
+                                                <div class="sent-message"></div>
+                                            </div>
+                                        </fieldset>
+                                        <div class="d-flex">
+                                            <button id="prev" type="button" class="btn mb-2 mb-md-0 btn-tertiary prev button-opacity"><i class="bi bi-chevron-left"></i></button>
+                                            <button type="button" style="position:absolute;right:50px;" class="btn mb-2 mb-md-0 btn-primary next"><span>Devam</span></button>
+                                            <button type="submit" style="position:absolute;right:50px;" class="btn mb-2 mb-md-0 btn-primary publish button-dn"><span>Tamamla</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </main><!-- End #main -->
+        {% include 'flex/include/flex-footer.html' %}
+        {% include 'flex/include/script.html' %}
+        <script src="{% static 'assets/flex/js/teklif/example.js' %}"></script>   
+    </body>
+</html>

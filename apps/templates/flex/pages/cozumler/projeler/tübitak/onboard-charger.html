@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Onboard Charger - Solvaytech</title>
+        {% include 'flex/include/head.html' %}
+    </head>
+
+    <body>
+    {% include 'flex/include/header/page-header.html' %}
+    <main id="main">
+        <!-- ======= Breadcrumbs ======= -->
+        <section class="breadcrumbs">
+            <div class="container">
+                <ol>
+                    <li><a href="/">Anasayfa</a></li>
+                    <li><a href="/cozumler">Çözümler</a></li>
+                    <li><a href="/cozumler/projeler">Projeler</a></li>
+                    <li>Onboard Charger</li>
+                </ol>
+                <h2>Onboard Charger</h2>
+            </div>
+        </section><!-- End Breadcrumbs -->
+        <section class="inner-page">
+            <div class="container p-5 mb-4 bg-light rounded-3">
+                <div class="container-fluid">
+                    <header class="section-header"><p>Onboard Charger</p></header>
+                    <p style="text-align:justify;">
+                        Elektrikli araçlarda kullanılan bataryalar DC gerilime ihtiyaç duyar fakat şehir şebekelerinde AC gerilim bulunmaktadır.
+                        Aracın istenilen bir yerde şarj etmek isteyen kullanıcılar AC – DC dönüştürücüye ihtiyaç duyar. Duyulan bu ihtiyacı Onboard Charger karşılamaktadır.
+                        Onboard Charger, elektrikli araçların bataryalarını şarj etmek için kullanılan bir cihazdır.
+                        Bu cihaz, aracın içerisinde bulunan şarj aletidir. Harici şarj cihazına gerek kalmadan AC-DC dönüşümünü sağlar.
+                        Aynı zamanda sağlıklı batarya şarjı için diğer şarj ekipmanlarıyla iletişim kuran sistem voltaj, akım, sıcaklık, şarj durumu gibi bilgileri takip eder.
+                        Aynı zamanda araçta bulunan ECU sistemi ile CAN Hattı üzerinden haberleşme bilmektedir.
+                        Araç üzerine yerleştirilen Onboard Charger tam olarak bu işlem için bünyemizde tamamen yerli olarak üretilip kullanıcıya sunulmaktadır.
+                    </p>
+                </div>
+                <div class="row mt-5 align-items-center">
+                    <div class="d-flex justify-content-start col-6">
+                        <a href="/cozumler/projeler" class="btn btn-primary" role="button"><i class="bi bi-chevron-left"></i> Projeler </a>
+                    </div>
+                    <div class="d-flex justify-content-end col-6">
+                        <a href="/cozumler/projeler/multiport" class="btn btn-primary" role="button">Multiport <i class="bi bi-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main><!-- End #main -->
+    {% include 'flex/include/flex-footer.html' %}
+    {% include 'flex/include/script.html' %}
+    </body>
+</html>

@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Akıllı Arı İzleme Sistemi - Solvaytech</title>
+        {% include 'flex/include/head.html' %}
+    </head>
+
+    <body>
+    {% include 'flex/include/header/page-header.html' %}
+    <main id="main">
+        <!-- ======= Breadcrumbs ======= -->
+        <section class="breadcrumbs">
+            <div class="container">
+                <ol>
+                    <li><a href="/">Anasayfa</a></li>
+                    <li><a href="/urunler">Ürünler</a></li>
+                    <li>Akıllı Arı İzleme Sistemi</li>
+                </ol>
+                <h2>Akıllı Arı İzleme Sistemi</h2>
+            </div>
+        </section><!-- End Breadcrumbs -->
+        <section class="inner-page">
+            <div class="container p-5 mb-4 bg-light rounded-3">
+                <div class="container-fluid">
+                    <header class="section-header"><p>Akıllı Arı İzleme Sistemi</p></header>
+                    <p style="text-align:justify;">
+                        Sorunlara yönelik yaklaşımımız ile bu sorunlara ileri teknoloji, veriler ve uzmanlığını kullanarak yenilikçi çözümler sunan şirketimiz, arıcılık mesleğinde yaşanan sorunları fark ederek çözüm sunmuştur.
+                        Arıcılığın sürdürülebilir çözümü olan arı kovanı izleme sistemi geliştirmiştir. 
+                        Arı kovanı izleme sistemiyle bir kovanın ağırlık, iç ve dış sıcaklığı ile kovanın sesi gibi verileri toplanarak bulut üzerinde arıcının mobil cihazına gönderim sağlanır. 
+                        Böylelikle arıcının bütün kovanlarını aynı anda takip etmesine olanak sağlanır. 
+                        Bu durumda işi kolaylaşan arıcının verimi artar.
+                    </p>
+                </div>
+                <div class="row mt-5 align-items-center">
+                    <div class="d-flex justify-content-start col-6">
+                        <a href="/urunler" class="btn btn-primary" role="button"><i class="bi bi-chevron-left"></i> Ürünler </a>
+                    </div>
+                    <div class="d-flex justify-content-end col-6">
+                        <a href="/urunler/stk" class="btn btn-primary" role="button">Sıcak Tel Köpük Kesme <i class="bi bi-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main><!-- End #main -->
+    {% include 'flex/include/flex-footer.html' %}
+    {% include 'flex/include/script.html' %}
+    </body>
+</html>

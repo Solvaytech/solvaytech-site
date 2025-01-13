@@ -1,0 +1,85 @@
+<!-- ======= ANASAYFA NAVLINK SCROLLTO ACTIVE USAGE ======= -->
+{% load static %}
+<!-- ======= Header ======= -->
+<header id="header" class="header fixed-top">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+        <a href="/" class="logo d-flex align-items-center">
+                <img src="{% static 'assets/flex/img/png/logo.png'%}" alt="">
+                <span>Solvaytech</span>
+        </a>
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li><a class="nav-link" href="/">Ana Sayfa</a></li>
+                <li class="dropdown"><a class="nav-link" href="/about"><span>Hakkımızda</span> <i class="bi bi-chevron-right"></i></a>
+                    <ul>
+                        <li><a href="/about">Misyon, Vizyon ve Değerlerimiz</a></li>
+                        <li><a href="/about/esitlik">Cinsiyet Eşitliği Planı</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a class="nav-link" href="/cozumler"><span>Çözümlerimiz</span> <i class="bi bi-chevron-right"></i></a>
+                    <ul>
+                        <li class="dropdown"><a href="/cozumler"><span>Danışmanlık</span> <i class="bi bi-chevron-right"></i></a>
+                                <ul>
+                                    <li><a href="/cozumler/proje-danisma">Proje Danışmanlığı</a></li>
+                                    <li><a href="/cozumler/meedp">Makine Ekipman Elektrik Dönüşüm Projeleri</a></li>
+                                </ul>
+                        </li>
+                        <li><a href="/cozumler/otomasyon">Otomasyon</a></li>
+                        <li class="dropdown"><a class="nav-link" href="/cozumler/projeler"><span>Projeler</span> <i class="bi bi-chevron-right"></i></a>
+                            <ul>
+                                <li class="dropdown"><a href="/cozumler/projeler"><span>Tübitak-Teydeb</span> <i class="bi bi-chevron-right"></i></a>
+                                        <ul>
+                                            <li><a href="/cozumler/projeler/onboard-charger">Onboard Charger</a></li>
+                                            <li><a href="/cozumler/projeler/multiport">Multiport</a></li>
+                                        </ul>
+                                </li>
+                                <li class="dropdown"><a href="/cozumler/projeler"><span>Kosgeb</span> <i class="bi bi-chevron-right"></i></a>
+                                    <ul>
+                                        <li><a href="/cozumler/projeler/ceryan">Ceryan</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="/cozumler/projeler"><span>Avrupa Birliği</span> <i class="bi bi-chevron-right"></i></a>
+                                    <ul>
+                                        <li><a href="/cozumler/projeler">Hazırlanıyor</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown"><a href="/cozumler"><span>Bakım Onarım Hizmetleri</span> <i class="bi bi-chevron-right"></a></i>
+                            <ul class="ul-left-imp">
+                                <li><a href="/cozumler/ekkkyg">Endüstriyel Kontrol Kumanda Kart Yenileme / Güncelleme</a></li>
+                                <li><a href="/cozumler/ekkkt">Endüstriyel Kontrol Kumanda Kart Tasarımı</a></li>
+                                <li><a href="/cozumler/imkkkyg">İş Makineleri Kontrol Kumanda Kart Yenileme / Güncelleme</a></li>
+                                <li><a href="/cozumler/imkkkt">İş Makineleri Kontrol Kumanda Kart Tasarım</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="/urunler"><span>Ürünlerimiz</span> <i class="bi bi-chevron-right"></i></a>
+                    <ul>
+                        <li><a href="/urunler/dc-dc">DC/DC Çeviriciler</a></li>
+                        <li><a href="/urunler/motor-surucu">Motor Sürücüler</a></li>
+                        <li><a href="/urunler/mikro-inverter">Mikroinverter</a></li>
+                        <li><a href="/urunler/bms">Batarya Yönetim Sistemi</a></li>
+                        <li class="dropdown"><a href="/urunler"><span>Deney Setleri</span> <i class="bi bi-chevron-right"></a></i>
+                            <ul>
+                                <li><a href="/urunler/stk">Sıcak Tel Kesme</a></li>
+                                <li><a href="/urunler/bty">Batarya Termal Yönetim Test</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/urunler/acc-plc">ACC-PLC</a></li>
+                        <li><a href="/urunler/acs-200">ACS-200</a></li>
+                        <li><a href="/urunler/assr-dim-plc">ASSR-DIM-PLC</a></li>
+                        <li><a href="/urunler/esp-sm3">ESP-SM3</a></li>
+                    </ul>
+                </li>
+                <li><a class="nav-link" href="/makaleler">Makaleler</a></li>
+                <li><a class="nav-link" href="/news">Basında Biz</a></li>
+                {% comment %} <li><a class="nav-link" href="/teklif">Abonelik/Teklif Al</a></li> {% endcomment %}
+                {% comment %} <li><a class="getstarted scrollto" href="portfolio">Shop</a></li> {% endcomment %}
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+
+    </div>
+</header><!-- End Header -->

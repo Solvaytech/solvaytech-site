@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Ceryan - Solvaytech</title>
+        {% include 'flex/include/head.html' %}
+    </head>
+
+    <body>
+    {% include 'flex/include/header/page-header.html' %}
+    <main id="main">
+        <!-- ======= Breadcrumbs ======= -->
+        <section class="breadcrumbs">
+            <div class="container">
+                <ol>
+                    <li><a href="/">Anasayfa</a></li>
+                    <li><a href="/cozumler">Çözümler</a></li>
+                    <li><a href="/cozumler/projeler">Projeler</a></li>
+                    <li>Ceryan</li>
+                </ol>
+                <h2>Ceryan</h2>
+            </div>
+        </section><!-- End Breadcrumbs -->
+        <section class="inner-page">
+            <div class="container p-5 mb-4 bg-light rounded-3">
+                <div class="container-fluid">
+                    <header class="section-header"><p>Ceryan</p></header>
+                    <p style="text-align:justify;">
+                        KOSGEB Ar-Ge İnovasyon desteği ile 2020 yılında Çukurova Üniversitesi Teknopark'ta kurulan Solvaytech, elektrikli araçlar alanında faaliyet gösteren bir Ar-Ge ve İnovasyon firmasıdır.
+                        Solvaytech, şehir içi ulaşımda verimliliği, çevreciliği, ekonomikliği ve erişim kolaylığı maliyeti ile öne çıkacak bir araç olan L6e sınıfı dört tekerlekli elektrikli mikro araç CERYAN'ın yerli üretimi üzerinde çalışmaktadır. 
+                        Elektrikli araçlara yönelik DC/DC Ana Güç Grubu, Batarya Yönetim Sistemi, Onboard Şarj Cihazı, BLDC Motor Sürücüsü, EVSE (Elektrikli Araç Besleme Ekipmanları) alt bileşenler dışında Multiport Çift Yönlü DC/DC Dönüştürücü, Güneş Paneli ile Entegre Mikroinverter ve Akıllı Arı Sürüsü İzleme projelerimizde bulunmaktadır.
+                    </p>
+                </div>
+                <div class="row mt-5 align-items-center">
+                    <div class="d-flex justify-content-start col-6">
+                        <a href="/cozumler/projeler" class="btn btn-primary" role="button"><i class="bi bi-chevron-left"></i> Projeler </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main><!-- End #main -->
+    {% include 'flex/include/flex-footer.html' %}
+    {% include 'flex/include/script.html' %}
+    </body>
+</html>

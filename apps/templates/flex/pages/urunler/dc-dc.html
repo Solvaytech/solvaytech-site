@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>DC-DC Converter - Solvaytech</title>
+        {% include 'flex/include/head.html' %}
+    </head>
+
+    <body>
+    {% include 'flex/include/header/page-header.html' %}
+    <main id="main">
+        <!-- ======= Breadcrumbs ======= -->
+        <section class="breadcrumbs">
+            <div class="container">
+                <ol>
+                    <li><a href="/">Anasayfa</a></li>
+                    <li><a href="/urunler">Ürünler</a></li>
+                    <li>DC-DC Converter</li>
+                </ol>
+                <h2>DC-DC Converter</h2>
+            </div>
+        </section><!-- End Breadcrumbs -->
+        <section class="inner-page">
+            <div class="container p-5 mb-4 bg-light rounded-3">
+                <div class="container-fluid">
+                    <header class="section-header"><p>DC-DC Converter</p></header>
+                    <p style="text-align:justify;">
+                        DC – DC Buck Converter, yüksek gerilimli bataryadan düşük gerilimli alt sistemlere güç sağlamak için kullanılır. 
+                        Alçaltan dönüştürücüler yüksek gerilimi düşük gerilime dönüştürülerek araç içinde diğer cihazlar tarafından uygun gerilim seviyelerinde kullanım sağlar.<br><br>
+                        Ürünlerimiz; son teknoloji güç dönüştürme topolojileri kullanılarak tasarlanırlar. 
+                        Yüksek verimlilikli; standart boyutlu, yüksek voltajlı ve ihtiyaca yönelik özel tasarım güç kaynaklarımız farklı arayüzler ve bağlantı tiplerine sahiptir.
+                    </p>
+                </div>
+                <div class="row mt-5 align-items-center">
+                    <div class="d-flex justify-content-start col-6">
+                        <a href="/urunler" class="btn btn-primary" role="button"><i class="bi bi-chevron-left"></i> Ürünler </a>
+                    </div>
+                    <div class="d-flex justify-content-end col-6">
+                        <a href="/urunler/motor-surucu" class="btn btn-primary" role="button">Motor Sürücü <i class="bi bi-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main><!-- End #main -->
+    {% include 'flex/include/flex-footer.html' %}
+    {% include 'flex/include/script.html' %}
+    </body>
+</html>
