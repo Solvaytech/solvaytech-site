@@ -26,6 +26,10 @@ urlpatterns = [
     path('cozumler/projeler', views.projeServe, name="proje"),
     path('cozumler/projeler/onboard-charger', views.onboardChargerServe, name="onboard-charger"),
     path('cozumler/projeler/multiport', views.multiportServe, name="multiport"),
+
+    path('cozumler/projeler/arisistemi', views.arisistemiServe, name="arisistemi"),
+    path('cozumler/projeler/droneproje', views.droneprojeServe, name="droneproje"),
+    
     path('cozumler/projeler/ceryan', views.ceryanServe, name="ceryan"),
     path('urunler/dc-dc', views.dcdcServe, name="dc-dc"),
     path('urunler/motor-surucu', views.msServe, name="motor-surucu"),
