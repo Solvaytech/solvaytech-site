@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Multiport - Solvaytech</title>
+        {% include 'flex/include/head.html' %}
+    </head>
+
+    <body>
+    {% include 'flex/include/header/page-header.html' %}
+    <main id="main">
+        <!-- ======= Breadcrumbs ======= -->
+        <section class="breadcrumbs">
+            <div class="container">
+                <ol>
+                    <li><a href="/">Anasayfa</a></li>
+                    <li><a href="/cozumler">Çözümler</a></li>
+                    <li><a href="/cozumler/projeler">Projeler</a></li>
+                    <li>Y.Z. Tabanlı Drone Projesi</li>
+                </ol>
+                <h2>Y.Z. Tabanlı Drone Projesi</h2>
+            </div>
+        </section><!-- End Breadcrumbs -->
+        <section class="inner-page">
+            <div class="container p-5 mb-4 bg-light rounded-3">
+                <div class="container-fluid">
+                    <header class="section-header"><p>Y.Z. Tabanlı Drone Projesi</p></header>
+                    <p style="text-align:justify;">
+                        Dünyada yetiştirilen bitkilerin ilaçlanabilmesi için kullanılan traktörlerin yetiştirilen ürünlere zarar veriyor olması ve bunun sonucunda hasat edilen 
+                        ürün miktarını etkilemesiyle ilaçlama için yeni çözümler aranmaya başlanmıştır. İlaçlama sektörü, yetiştirilen bitkiye zarar vermeden ve toprak, su kirliliğini
+                        azaltmayı amaçlayan tarım dronelarının verimini arttırma, kirlenmeyi azaltmak ve yapay zeka desteğiyle hava aracının kullanıcının görüşünden çıktığı alanları
+                        da eşit şekilde eşit ve bitki çeşidine göre ilaç püskürtme kontrolünü yapabilecek kontrol algoritması eklenerek piyasadaki ürünlerden farklılaşmasını ve ilaçlama
+                        sektörünü geliştirmeyi, tarım ürünlerinin verimini arttırmayı amaçlamaktadır.
+                    </p>
+                </div>
+                <div class="row mt-5 align-items-center">
+                    <div class="d-flex justify-content-start col-6">
+                        <a href="/cozumler/projeler" class="btn btn-primary" role="button"><i class="bi bi-chevron-left"></i> Projeler </a>
+                    </div>
+                    <div class="d-flex justify-content-end col-6">
+                        <a href="/cozumler/projeler/onboard-charger" class="btn btn-primary" role="button">Onboard Charger <i class="bi bi-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main><!-- End #main -->
+    {% include 'flex/include/flex-footer.html' %}
+    {% include 'flex/include/script.html' %}
+    </body>
+</html>
