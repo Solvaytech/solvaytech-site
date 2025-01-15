@@ -13,6 +13,16 @@ from apps.home.models import Contact
 from core.settings import BASE_DIR
 
 
+def arisistemiServe(request):
+    context = {}
+    html_template = loader.get_template('flex/pages/cozumler/projeler/tübitak/arisistemi.html')
+    return HttpResponse(html_template.render(context, request))
+
+def droneprojeServe(request):
+    context = {}
+    html_template = loader.get_template('flex/pages/cozumler/projeler/tübitak/droneproje.html')
+    return HttpResponse(html_template.render(context, request))
+
 def esp_sm3Serve(request):
     context = {}
     html_template = loader.get_template('flex/pages/urunler/esp-sm3.html')
