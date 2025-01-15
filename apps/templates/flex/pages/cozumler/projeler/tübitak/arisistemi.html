@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Multiport - Solvaytech</title>
+        {% include 'flex/include/head.html' %}
+    </head>
+
+    <body>
+    {% include 'flex/include/header/page-header.html' %}
+    <main id="main">
+        <!-- ======= Breadcrumbs ======= -->
+        <section class="breadcrumbs">
+            <div class="container">
+                <ol>
+                    <li><a href="/">Anasayfa</a></li>
+                    <li><a href="/cozumler">Çözümler</a></li>
+                    <li><a href="/cozumler/projeler">Projeler</a></li>
+                    <li>Y.Z. Tabanlı Arı İzleme Sistemi</li>
+                </ol>
+                <h2>Y.Z. Tabanlı Arı İzleme Sistemi</h2>
+            </div>
+        </section><!-- End Breadcrumbs -->
+        <section class="inner-page">
+            <div class="container p-5 mb-4 bg-light rounded-3">
+                <div class="container-fluid">
+                    <header class="section-header"><p>Y.Z. Tabanlı Arı İzleme Sistemi</p></header>
+                    <p style="text-align:justify;">
+                    ESP32 tabanlı IoT cihazımız, arı kovanlarının kritik parametrelerini izleyerek arıcılık ve çevre izleme
+                    projelerine yenilikçi bir yaklaşım sunuyor. Bu cihaz, sıcaklık, nem, kovan içi ses ve
+                    konum gibi hayati verileri hassas bir şekilde ölçerek uzak lokasyonlardaki arı kovanlarının durumunu gerçek zamanlı
+                    olarak takip etme imkanı sağlıyor. Toplanan veriler, ESP32’nin düşük güç tüketimli ve yüksek performanslı bağlantı
+                    özellikleri sayesinde bulut tabanlı bir platforma iletiliyor. Bulutta çalışan yapay zeka algoritmaları, bu verileri
+                    analiz ederek kovanların sağlık durumunu değerlendiriyor ve potansiyel sorunlara karşı erken uyarılar oluşturuyor.
+                    Bu analizlerin sonuçları, arıcıların kolayca erişim sağlayabileceği bir mobil uygulama aracılığıyla son kullanıcılara aktarılıyor.
+                    Böylece arıcılar, kovanlarının durumu hakkında her an bilgi sahibi olurken, hızlı müdahale gerektiren durumlarda proaktif adımlar
+                    atabiliyor. Bu teknoloji, sadece arıların sağlığını korumakla kalmıyor, aynı zamanda tarım ekosisteminin sürdürülebilirliği
+                    ve biyolojik çeşitliliğin devamlılığı açısından da büyük bir katkı sağlıyor.
+                    </p>
+                </div>
+                <div class="row mt-5 align-items-center">
+                    <div class="d-flex justify-content-start col-6">
+                        <a href="/cozumler/projeler" class="btn btn-primary" role="button"><i class="bi bi-chevron-left"></i> Projeler </a>
+                    </div>
+                    <div class="d-flex justify-content-end col-6">
+                        <a href="/cozumler/projeler/droneproje" class="btn btn-primary" role="button">Y.Z. Tabanlı Drone Projesi<i class="bi bi-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main><!-- End #main -->
+    {% include 'flex/include/flex-footer.html' %}
+    {% include 'flex/include/script.html' %}
+    </body>
+</html>
