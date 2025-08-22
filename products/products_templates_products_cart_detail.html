@@ -1,0 +1,14 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Your Cart</h1>
+  <ul>
+    {% for item in order.items.all %}
+      <li>
+        {{ item.quantity }} x {{ item.product.name }}
+        <a href="{% url 'cart_remove' item.product.id %}">Remove</a>
+      </li>
+    {% endfor %}
+  </ul>
+  <a href="{% url 'checkout' %}">Checkout</a>
+{% endblock %}

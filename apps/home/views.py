@@ -11,37 +11,11 @@ from .futures.query import Query
 import json
 from apps.home.models import Contact
 from core.settings import BASE_DIR
+from django.shortcuts import render
 
-
-def arisistemiServe(request):
-    context = {}
-    html_template = loader.get_template('flex/pages/cozumler/projeler/tübitak/arisistemi.html')
-    return HttpResponse(html_template.render(context, request))
-
-def droneprojeServe(request):
-    context = {}
-    html_template = loader.get_template('flex/pages/cozumler/projeler/tübitak/droneproje.html')
-    return HttpResponse(html_template.render(context, request))
-
-def esp_sm3Serve(request):
-    context = {}
-    html_template = loader.get_template('flex/pages/urunler/esp-sm3.html')
-    return HttpResponse(html_template.render(context, request))
-
-def assr_dim_plcServe(request):
-    context = {}
-    html_template = loader.get_template('flex/pages/urunler/assr-dim-plc.html')
-    return HttpResponse(html_template.render(context, request))
-
-def acc_plcServe(request):
-    context = {}
-    html_template = loader.get_template('flex/pages/urunler/acc-plc.html')
-    return HttpResponse(html_template.render(context, request))
-
-def acs_200Serve(request):
-    context = {}
-    html_template = loader.get_template('flex/pages/urunler/acs-200.html')
-    return HttpResponse(html_template.render(context, request))
+def product_list(request):
+    # Ürünleri listeleyen view
+    return render(request, 'product_list.html')
 
 def Admin(request):
     return HttpResponseRedirect(reverse('admin:index'))
@@ -180,9 +154,54 @@ def btyServe(request):
     html_template = loader.get_template('flex/pages/urunler/deney-setleri/bty.html')
     return HttpResponse(html_template.render(context, request))
 
+def acchopperServe(request):
+    context = {}
+    html_template = loader.get_template('flex/pages/urunler/ac-chopper.html')
+    return HttpResponse(html_template.render(context, request))
+
+def akimsensoruServe(request):
+    context = {}
+    html_template = loader.get_template('flex/pages/urunler/akim-sensoru.html')
+    return HttpResponse(html_template.render(context, request))
+
+def dimmerServe(request):
+    context = {}
+    html_template = loader.get_template('flex/pages/urunler/dimmer.html')
+    return HttpResponse(html_template.render(context, request))
+
+def stepmotorsurucuServe(request):
+    context = {}
+    html_template = loader.get_template('flex/pages/urunler/step-motor-surucu.html')
+    return HttpResponse(html_template.render(context, request))
+
 def aaisServe(request):
     context = {}
     html_template = loader.get_template('flex/pages/urunler/aais.html')
+    return HttpResponse(html_template.render(context, request))
+
+def mobilgucServe(request):
+    context = {}
+    html_template = loader.get_template('flex/pages/urunler/mobil-guc.html')
+    return HttpResponse(html_template.render(context, request))
+
+def espsensorkatiServe(request):
+    context = {}
+    html_template = loader.get_template('flex/pages/urunler/esp-sensor-karti.html')
+    return HttpResponse(html_template.render(context, request))
+
+def espmotorkartiServe(request):
+    context = {}
+    html_template = loader.get_template('flex/pages/urunler/esp-motor-karti.html')
+    return HttpResponse(html_template.render(context, request))
+
+def voltajyukselticiServe(request):
+    context = {}
+    html_template = loader.get_template('flex/pages/urunler/voltaj-yukseltici.html')
+    return HttpResponse(html_template.render(context, request))
+
+def bataryasarjServe(request):
+    context = {}
+    html_template = loader.get_template('flex/pages/urunler/batarya-sarj-modulu.html')
     return HttpResponse(html_template.render(context, request))
 
 def projeServe(request):
@@ -219,6 +238,8 @@ def errorServe(request):
     context = {}
     html_template = loader.get_template('flex/pages/404/404.html')
     return HttpResponse(html_template.render(context, request))
+
+
 
 class ContactAPI(View):
     def get(self, request):

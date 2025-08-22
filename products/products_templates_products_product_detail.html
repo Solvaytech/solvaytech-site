@@ -1,0 +1,8 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>{{ product.name }}</h1>
+  <p>{{ product.description }}</p>
+  <p>{{ product.price }}</p>
+  <a href="{% url 'cart_add' product.id %}">Add to cart</a>
+{% endblock %}

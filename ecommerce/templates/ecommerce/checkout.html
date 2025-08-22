@@ -1,0 +1,4 @@
+<form action="{% url 'checkout' %}" method="POST">
+    {% csrf_token %}
+    <button type="submit">Ödemeyi Tamamla</button>
+</form>

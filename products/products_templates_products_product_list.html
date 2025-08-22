@@ -1,0 +1,36 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Ürünler</h1>
+  <ul>
+    {% for product in products %}
+      <li style="margin-bottom: 30px;">
+        <strong>{{ product.name }}</strong><br>
+
+        {% if product.description %}
+          <p>{{ product.description }}</p>
+        {% endif %}
+
+        {% if product.link %}
+          <a href="{{ product.link }}" target="_blank">Ürün Linki</a><br>
+        {% endif %}
+
+        {% if product.datasheet %}
+          <a href="{{ product.datasheet.url }}" target="_blank">Datasheet indir</a><br>
+        {% endif %}
+
+        {% if product.image1 %}
+          <img src="{{ product.image1.url }}" alt="{{ product.name }}" width="150" /><br>
+        {% endif %}
+        {% if product.image2 %}
+          <img src="{{ product.image2.url }}" alt="{{ product.name }}" width="150" /><br>
+        {% endif %}
+        {% if product.image3 %}
+          <img src="{{ product.image3.url }}" alt="{{ product.name }}" width="150" /><br>
+        {% endif %}
+
+        <small>Eklenme Tarihi: {{ product.created_at|date:"d.m.Y H:i" }}</small>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}

@@ -1,10 +1,11 @@
+from django.contrib import admin
 from django.urls import path, re_path
 from apps.home import views
 from .views import ContactAPI, NewsAPI, TeklifAPI
 
 urlpatterns = [
 
-    # The home page
+    # The home page  
     path('', views.serveIndex, name='home'),
     path('admin', views.Admin, name='admin'),
     path('webp', views.webpIndex, name="webp"),
@@ -26,10 +27,6 @@ urlpatterns = [
     path('cozumler/projeler', views.projeServe, name="proje"),
     path('cozumler/projeler/onboard-charger', views.onboardChargerServe, name="onboard-charger"),
     path('cozumler/projeler/multiport', views.multiportServe, name="multiport"),
-
-    path('cozumler/projeler/arisistemi', views.arisistemiServe, name="arisistemi"),
-    path('cozumler/projeler/droneproje', views.droneprojeServe, name="droneproje"),
-    
     path('cozumler/projeler/ceryan', views.ceryanServe, name="ceryan"),
     path('urunler/dc-dc', views.dcdcServe, name="dc-dc"),
     path('urunler/motor-surucu', views.msServe, name="motor-surucu"),
@@ -37,12 +34,16 @@ urlpatterns = [
     path('urunler/bms', views.bmsServe, name="bms"),
     path('urunler/stk', views.stkServe, name="stk"),
     path('urunler/bty', views.btyServe, name="bty"),
-    
-    path('urunler/esp-sm3', views.esp_sm3Serve, name='esp-sm3'),
-    path('urunler/assr-dim-plc', views.assr_dim_plcServe, name='assr-dim-plc'),
-    path('urunler/acc-plc', views.acc_plcServe, name='acc-plc'),
-    path('urunler/acs-200', views.acs_200Serve, name='acs-200'),
-    # path('urunler/aais', views.aaisServe, name="aais"),
+    path('urunler/ac-chopper', views.acchopperServe, name="ac-chopper"),
+    path('urunler/akim-sensoru', views.akimsensoruServe, name="akim-sensoru"),
+    path('urunler/dimmer', views.dimmerServe, name="dimmer"),
+    path('urunler/step-motor-surucu', views.stepmotorsurucuServe, name="step-motor-surucu"),
+    path('urunler/aais', views.aaisServe, name="aais"),
+    path('urunler/mobil-guc', views.mobilgucServe, name="mobil-guc"),
+    path('urunler/esp-sensor-karti', views.espsensorkatiServe, name="esp-sensor-karti"),
+    path('urunler/voltaj-yukseltici', views.voltajyukselticiServe, name="voltaj-yukseltici"),
+    path('urunler/batarya-sarj-modulu', views.bataryasarjServe, name="batarya-sarj-modulu"),
+    path('urunler/esp-motor-karti', views.espmotorkartiServe, name="esp-motor-karti"),
     path('makaleler', views.makaleServe, name="makale"),
     path('news', views.newsServe, name="news"),
     # path('blog-single', views.blogSingleIndex, name="blog-single"),
@@ -56,10 +57,5 @@ urlpatterns = [
     # path('api/staj/202307', StajerAPI.as_view(), name="stajer-api"),
     # Matches any html file
     re_path(r'^.*\.*', views.errorServe, name='404'),
-    
-    
-    
 
 ]
-
-

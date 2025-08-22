@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <h2>Ürünler</h2>
+    <div class="product-list">
+        {% for product in products %}
+            <div class="product">
+                <!-- Görsel 1 -->
+                {% if product.image1 %}
+                    <img src="{{ product.image1.url }}" alt="{{ product.name }}">
+                {% else %}
+                    <img src="{% static 'default-image.jpg' %}" alt="Görsel yok">
+                {% endif %}
+
+                <!-- Ürün adı ve açıklama -->
+                <h3>{{ product.name }}</h3>
+                <p>{{ product.description }}</p>
+
+                <!-- Ürün sayfası linki -->
+                {% if product.link %}
+                    <p><a href="{{ product.link }}" target="_blank">Ürün Linki</a></p>
+                {% endif %}
+
+                <!-- Datasheet linki -->
+                {% if product.datasheet %}
+                    <p><a href="{{ product.datasheet.url }}" target="_blank">Datasheet (PDF)</a></p>
+                {% endif %}
+
+                <!-- Diğer görseller -->
+                <div class="product-images">
+                    {% if product.image2 %}
+                        <img src="{{ product.image2.url }}" alt="Ek Görsel 2">
+                    {% endif %}
+                    {% if product.image3 %}
+                        <img src="{{ product.image3.url }}" alt="Ek Görsel 3">
+                    {% endif %}
+                </div>
+
+                <!-- Sepete ekle (şimdilik boş link) -->
+                <a href="#">Sepete Ekle</a>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

@@ -8,10 +8,10 @@ CORE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SECRET_KEY','solvaytech_2024')
-
+STRIPE_SECRET_KEY = "your_secret_key_here"
+STRIPE_PUBLIC_KEY = "your_public_key_here"
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG', False)
-
+DEBUG = False
 # load production server from .env
 # ALLOWED_HOSTS = [config('HOST_1'), config('HOST_2'), 'localhost', '127.0.0.1']
 
@@ -31,7 +31,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'apps.home'  # Enable the inner home (home)
+    'apps.home',  # Enable the inner home (home)
+    'ecommerce',
 ]
 
 MIDDLEWARE = [
@@ -165,11 +166,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = [
+STATICFILES_DIRS = (
     os.path.join(CORE_DIR, 'apps/static'),
-      
-]
-
+)
 
 # django_heroku.settings(locals())
 
